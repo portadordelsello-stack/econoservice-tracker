@@ -208,7 +208,7 @@ export default function App() {
           </div>
 
           {/* Quick instructions or status badge */}
-          <div className="flex items-center gap-2.5 w-full sm:w-auto justify-end">
+          <div className="flex items-center gap-2.5 w-full sm:w-auto justify-center sm:justify-end">
             <div className="bg-blue-50 border border-blue-100 rounded-xl px-3.5 py-1.5 flex items-center gap-2 text-blue-700 text-xs font-semibold shadow-sm">
               <Sparkles className="w-3.5 h-3.5 text-blue-600 animate-pulse" />
               <span>Monitoreo de Reparto Activo</span>
@@ -222,7 +222,7 @@ export default function App() {
         
         {/* Left Side: Map Container (Dominant visual area) */}
         <div className="lg:col-span-8 flex flex-col gap-4">
-          <div className="flex-1 min-h-[480px] lg:min-h-0 bg-white rounded-2xl relative shadow-md overflow-hidden border border-slate-200/60 p-1">
+          <div className="h-[340px] sm:h-[420px] md:h-[480px] lg:h-auto lg:flex-1 bg-white rounded-2xl relative shadow-md overflow-hidden border border-slate-200/60 p-1">
             <MapComponent
               currentCoords={currentCoords}
               routePoints={selectedDelivery.routePoints}
@@ -240,7 +240,7 @@ export default function App() {
                 <Info className="w-4 h-4 shrink-0" />
               </div>
               <p className="font-medium">
-                Ruta activa desde el taller de <strong className="text-slate-900">EconoService</strong> (Vélez Sarsfield 2569, Santo Tomé) hasta la entrega en <strong className="text-slate-900">{selectedDelivery.address}</strong>.
+                Ruta activa desde el taller de <strong className="text-slate-900">EconoService</strong> (Av. Luján 2500, Santo Tomé) hasta la entrega en <strong className="text-slate-900">{selectedDelivery.address}</strong>.
               </p>
             </div>
             <div className="flex items-center gap-2 text-[11px] bg-slate-50 border border-slate-200/80 px-2.5 py-1 rounded-lg font-mono font-semibold text-slate-500 shadow-inner">
@@ -260,28 +260,6 @@ export default function App() {
             currentStepIndex={simulation.currentStepIndex}
             status={simulation.status}
           />
-
-          {/* Toggle Button for Simulator Controls */}
-          <div className="flex justify-center pt-2">
-            <button
-              onClick={() => setShowSimulator(!showSimulator)}
-              className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-slate-800 hover:bg-slate-700 active:bg-slate-900 text-white rounded-2xl text-xs font-bold shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer"
-            >
-              <SlidersHorizontal className="w-4 h-4 text-sky-400" />
-              <span>{showSimulator ? 'Ocultar Consola de Simulación' : 'Abrir Consola de Simulación'}</span>
-            </button>
-          </div>
-
-          {showSimulator && (
-            <SimulatorControls
-              deliveries={DELIVERIES}
-              selectedDelivery={selectedDelivery}
-              simulation={simulation}
-              onUpdateSimulation={handleUpdateSimulation}
-              onSelectDelivery={handleSelectDelivery}
-              onTriggerStatus={handleTriggerStatus}
-            />
-          )}
         </div>
       </main>
 

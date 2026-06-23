@@ -220,7 +220,7 @@ export default function TrackerCard({
       </div>
 
       {/* Driver and Contact Section */}
-      <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+      <div className="mt-5 pt-4 border-t border-slate-100 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="relative">
             <img 
@@ -239,10 +239,10 @@ export default function TrackerCard({
         </div>
 
         {/* Contact and Share buttons */}
-        <div className="flex gap-2.5">
+        <div className="flex gap-2.5 w-full sm:w-auto">
           <button
             onClick={() => handleCopyLink(delivery.id)}
-            className={`px-3.5 py-2.5 rounded-xl border font-bold text-xs flex items-center gap-1.5 transition-all hover:scale-105 active:scale-95 shadow-sm cursor-pointer ${
+            className={`flex-1 sm:flex-none px-3.5 py-2.5 rounded-xl border font-bold text-xs flex items-center justify-center gap-1.5 transition-all hover:scale-105 active:scale-95 shadow-sm cursor-pointer ${
               copied
                 ? 'bg-emerald-50 border-emerald-300 text-emerald-700'
                 : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
@@ -266,7 +266,7 @@ export default function TrackerCard({
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white rounded-xl shadow-md shadow-emerald-100 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5 font-bold text-xs"
+            className="flex-1 sm:flex-none px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white rounded-xl shadow-md shadow-emerald-100 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5 font-bold text-xs"
             title="Enviar WhatsApp para consultas directas"
           >
             <MessageCircle className="w-4 h-4" />
