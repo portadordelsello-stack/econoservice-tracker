@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Lavarropas Tracker Santa Fe",
+  "description": "Aplicación de seguimiento en tiempo real de entregas de lavarropas para Econo Service en Santa Fe, Argentina.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
