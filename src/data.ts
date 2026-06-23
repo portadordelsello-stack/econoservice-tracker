@@ -77,7 +77,7 @@ export const DELIVERIES: Delivery[] = [
     estimatedTotalDistance: 11.4,
     driverName: 'Maxi Moe',
     driverPhone: '+54 342 411-9876',
-    driverPhotoUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80', // In Unsplash, a high-quality human face
+    driverPhotoUrl: '/maxi.png',
     workshopName: 'EconoService',
     workshopAddress: 'Av. Luján 2500, Santo Tomé, Santa Fe',
     workshopCoords: { lat: -31.66919208482076, lng: -60.77517235767236 }
@@ -94,7 +94,7 @@ export const DELIVERIES: Delivery[] = [
     estimatedTotalDistance: 10.2,
     driverName: 'Maxi Moe',
     driverPhone: '+54 342 411-9876',
-    driverPhotoUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80',
+    driverPhotoUrl: '/maxi.png',
     workshopName: 'EconoService',
     workshopAddress: 'Av. Luján 2500, Santo Tomé, Santa Fe',
     workshopCoords: { lat: -31.66919208482076, lng: -60.77517235767236 }
@@ -111,7 +111,7 @@ export const DELIVERIES: Delivery[] = [
     estimatedTotalDistance: 7.8,
     driverName: 'Maxi Moe',
     driverPhone: '+54 342 411-9876',
-    driverPhotoUrl: 'https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=150&q=80',
+    driverPhotoUrl: '/maxi.png',
     workshopName: 'EconoService',
     workshopAddress: 'Av. Luján 2500, Santo Tomé, Santa Fe',
     workshopCoords: { lat: -31.66919208482076, lng: -60.77517235767236 }

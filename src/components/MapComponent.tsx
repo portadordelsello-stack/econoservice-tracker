@@ -199,24 +199,6 @@ export default function MapComponent({
             <span className="text-slate-400 px-1">|</span>
             <span className="text-sky-400 capitalize">{mapEngine === 'google' ? 'Google Maps' : 'Leaflet OSM'}</span>
           </div>
-
-          {/* Engine toggle */}
-          <button
-            onClick={toggleEngine}
-            className="bg-white hover:bg-slate-100 text-slate-800 font-medium text-xs px-3 py-1.5 rounded-full shadow-lg border border-slate-200 flex items-center gap-1.5 transition-all active:scale-95 pointer-events-auto"
-          >
-            {mapEngine === 'leaflet' ? (
-              <>
-                <Eye className="w-3.5 h-3.5 text-sky-500" />
-                <span>Ver en Google Maps</span>
-              </>
-            ) : (
-              <>
-                <Layers className="w-3.5 h-3.5 text-indigo-500" />
-                <span>Ver en Leaflet (Offline)</span>
-              </>
-            )}
-          </button>
         </div>
 
         {/* Floating Google Maps instructions banner if they click and don't have a key */}
